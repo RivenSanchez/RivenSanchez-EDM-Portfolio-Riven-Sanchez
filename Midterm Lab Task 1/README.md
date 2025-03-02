@@ -1,23 +1,23 @@
-## Midterm Lan Task 1 Data Cleaning using Excel
-In this task we are give a raw data from excel to perform data cleaning and preparation for power query
+## Midterm LAB Task 1: Data Cleaning in Excel
+In this task, we are provided with raw data in an Excel file, and the goal is to perform data cleaning and preparation for Power Query.
 
-## STEP 1 Data cleaning proccess
-- Load the raw file in excel
-- Fit Column and Row width and height(Auto fit Columns and Rows)
-- Identify and Remove Duplicates
-- TRIM extra spaces
-- Remove NULL values
-- Spell Check
-- Data Validation
-- Handle Errors with IFERROR and FInd and Replace
-- Number Format
+## STEP 1: Data Cleaning Process
+- Load the raw file into Excel
+- Adjust the column and row sizes by auto-fitting them
+- Identify and remove duplicate entries
+- Trim any extra spaces
+- Remove any NULL values
+- Perform a spell check
+- Apply data validation
+- Handle errors using IFERROR and use Find and Replace as necessary
+- Adjust number formatting
 
-## STEP 2 Normalization
-- Perform 1NF
-- Perform Table Spilt using 2NF
-- Perform 3NF
-- Mapped the Normalized Table as a Physical Data Model
-
+## STEP 2: Normalization
+- Perform First Normal Form (1NF)
+- Split the table according to Second Normal Form (2NF)
+- Normalize the table to Third Normal Form (3NF)
+- Map the normalized table into a physical data model
+  
 ## STEP 3 Here's the screenshot of my output before I started data cleaning (SEE screenshot)
 ![sample Output](task%201%20image/before.png)
 
