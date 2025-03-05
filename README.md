@@ -9,7 +9,7 @@ In addition to his academic pursuits, Riven is passionate about basketball, whic
 
 
 # Education
-• Currently taking 1st year college 
+• Currently taking 1st year college at City College of Angeles
 
 • Senior High School: Francisco G. Nepomuceno Memorial High School - Senior High School
 
