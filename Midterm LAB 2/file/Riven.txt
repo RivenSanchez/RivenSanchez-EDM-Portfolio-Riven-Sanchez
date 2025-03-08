@@ -38,6 +38,6 @@ else
     #"Filtered Rows1" = Table.SelectRows(#"Replaced Value3", each true),
     #"Split Column by Position" = Table.SplitColumn(#"Filtered Rows1", "Company Name", Splitter.SplitTextByPositions({0, 3}, true), {"Company Name.1", "Company Name.2"}),
     #"Changed Type5" = Table.TransformColumnTypes(#"Split Column by Position",{{"Company Name.1", type text}, {"Company Name.2", type text}}),
-    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type5",{"Company Name.2"})
+    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type5",{"Company Name.2", "Size.2"})
 in
     #"Removed Columns1"
