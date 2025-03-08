@@ -34,6 +34,9 @@ else
     #"Renamed Columns2" = Table.RenameColumns(#"Inserted Text Between Delimiters2",{{"Text Before Delimiter", "MinCompanySize"}, {"Text Between Delimiters", "MaxCompanySize"}}),
     #"Replaced Value1" = Table.ReplaceValue(#"Renamed Columns2","-1","0",Replacer.ReplaceText,{"Revenue"}),
     #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","-1","0",Replacer.ReplaceText,{"Competitors"}),
-    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","-1","0",Replacer.ReplaceText,{"Industry"})
+    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","-1","0",Replacer.ReplaceText,{"Industry"}),
+    #"Filtered Rows1" = Table.SelectRows(#"Replaced Value3", each true),
+    #"Split Column by Position" = Table.SplitColumn(#"Filtered Rows1", "Company Name", Splitter.SplitTextByPositions({0, 3}, true), {"Company Name.1", "Company Name.2"}),
+    #"Changed Type5" = Table.TransformColumnTypes(#"Split Column by Position",{{"Company Name.1", type text}, {"Company Name.2", type text}})
 in
-    #"Replaced Value3"
+    #"Changed Type5"
