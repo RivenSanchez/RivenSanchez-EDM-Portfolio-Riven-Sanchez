@@ -1,5 +1,5 @@
 let
-    Source = Csv.Document(File.Contents("D:\I101\Uncleaned_DS_jobs.csv"),[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+    Source = Csv.Document(File.Contents("C:\Users\COMLAB\Downloads\Uncleaned_DS_jobs (1).csv"),[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
     #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
     #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"Job Title", type text}, {"Salary Estimate", type text}, {"Job Description", type text}, {"Rating", type number}, {"Company Name", type text}, {"Location", type text}, {"Headquarters", type text}, {"Size", type text}, {"Founded", Int64.Type}, {"Type of ownership", type text}, {"Industry", type text}, {"Sector", type text}, {"Revenue", type text}, {"Competitors", type text}}),
     #"Extracted Text Before Delimiter" = Table.TransformColumns(#"Changed Type", {{"Salary Estimate", each Text.BeforeDelimiter(_, "("), type text}}),
@@ -31,6 +31,9 @@ else
     #"Changed Type4" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"Size.1", type text}, {"Size.2", type text}}),
     #"Inserted Text Before Delimiter" = Table.AddColumn(#"Changed Type4", "Text Before Delimiter", each Text.BeforeDelimiter([Size.1], " "), type text),
     #"Inserted Text Between Delimiters2" = Table.AddColumn(#"Inserted Text Before Delimiter", "Text Between Delimiters", each Text.BetweenDelimiters([Size.1], " ", " ", 1, 0), type text),
-    #"Renamed Columns2" = Table.RenameColumns(#"Inserted Text Between Delimiters2",{{"Text Before Delimiter", "MinCompanySize"}, {"Text Between Delimiters", "MaxCompanySize"}})
+    #"Renamed Columns2" = Table.RenameColumns(#"Inserted Text Between Delimiters2",{{"Text Before Delimiter", "MinCompanySize"}, {"Text Between Delimiters", "MaxCompanySize"}}),
+    #"Replaced Value1" = Table.ReplaceValue(#"Renamed Columns2","-1","0",Replacer.ReplaceText,{"Revenue"}),
+    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","-1","0",Replacer.ReplaceText,{"Competitors"}),
+    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","-1","0",Replacer.ReplaceText,{"Industry"})
 in
-    #"Renamed Columns2"
+    #"Replaced Value3"
