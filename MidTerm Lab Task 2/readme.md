@@ -2,14 +2,19 @@
 ## 1. Task Description:
 Company X would like to extract valuable insights from the "UncleanedDSJObs.csv" dataset taken from a job posting site available on Kaggle. The dataset has several columns, but the main task is to clean and transform the data to answer the following business questions:
 
-## Which Job Roles pay the highest and least?
-## What size companies pay the best?
-## Where do Job Roles or Job Titles pay the best and least in a specific state?
+1. Which Job Roles pay the highest and least?
+2. What size companies pay the best?
+3. Where do Job Roles or Job Titles pay the best and least in a specific state?
 The data requires cleaning, transformation, and organization in Power Query Editor to generate answers to these questions.
 
 ## 2. Screenshot of the Dataset Before Data Cleaning and Transformation:
 ![before](image/before.png)
 ## 3. Steps Performed in Data Cleaning and Transformation:
+![cleaned data](image/cleaned%20data.png)
+![sal by role type dup](image/sal%20by%20role%20type%20dup.png)
+![sal by size ref](image/sal%20by%20size%20ref.png)
+![sal by state ref](image/sal%20by%20state%20ref.png)
+![query dependencies](image/query%20dependencies.png)
 ## Step 1: Loading the Data into Power Query
 - Open Excel and go to Data > Get Data > From Text/CSV.
 - Load the raw CSV file UnclenedDSJObs.csv into Power Query.
