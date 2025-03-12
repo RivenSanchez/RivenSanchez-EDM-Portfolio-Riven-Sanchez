@@ -8,7 +8,7 @@ Company X would like to extract valuable insights from the "UncleanedDSJObs.csv"
 The data requires cleaning, transformation, and organization in Power Query Editor to generate answers to these questions.
 
 ## 2. Screenshot of the Dataset Before Data Cleaning and Transformation:
-![before](Task%202/image/before.png)
+![before](image/before.png)
 ## 3. Steps Performed in Data Cleaning and Transformation:
 ## Step 1: Loading the Data into Power Query
 - Open Excel and go to Data > Get Data > From Text/CSV.
