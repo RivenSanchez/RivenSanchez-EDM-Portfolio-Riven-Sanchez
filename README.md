@@ -19,3 +19,5 @@ In addition to his academic pursuits, Riven is passionate about basketball, whic
 
 # My Projects
 Midterm LAB Task 1: [Data Cleaning and Preparation](Midterm%20Lab%20Task%201)
+Midterm LAB Task 2: [Data Cleaning and Preparation](Midterm%20Lab%20Task%202)
+Midterm LAB Task 3: [Data Cleaning and Preparation](Midterm%20Lab%20Task%203)
