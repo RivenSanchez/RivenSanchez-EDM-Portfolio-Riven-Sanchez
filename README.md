@@ -1,4 +1,4 @@
-# EDM-Portfolio-Riven-Sanchez
+# EDM-Portfolio
 This portfolio will contain copies of my Enterprise Data Management Lab Activities/Exercises
 # About Me
 Riven Sanchez is a first-year student pursuing a Bachelor of Science in Information Systems. He has a genuine passion for coding and technology, and he enjoys learning and experimenting with various programming languages. Currently, Riven is focusing on strengthening his knowledge of Python, eager to build a strong foundation for his future in tech.
