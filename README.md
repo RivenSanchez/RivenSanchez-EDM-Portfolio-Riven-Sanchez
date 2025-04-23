@@ -18,6 +18,8 @@ In addition to his academic pursuits, Riven is passionate about basketball, whic
 • Elementary: Sto. Rosario Elementary School
 
 # My Projects
+
+#MIDTERMS
 * Midterm LAB Task 1: [Data Cleaning and Preparation](Midterm%20Lab%20Task%201)
 * Midterm LAB Task 2: [Data Cleaning and Transformation using POWER QUERY](Midterm%20Lab%20Task%202)
 * Midterm LAB Task 3: [Creating Pivot Tables and Charts](Midterm%20Lab%20Task%203)
