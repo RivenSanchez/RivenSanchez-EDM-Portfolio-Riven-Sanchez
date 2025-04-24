@@ -26,16 +26,17 @@ submissions, and assignments. Identify the primary and foreign keys and ensure p
 #### TABLE STRUCTURE
 ![](image/task%202.1.png)
 
-- Creating Submission Table  
-` username VARCHAR(50), FOREIGN KEY (username) REFERENCES student_tbl(username), shortname VARCHAR(50), FOREIGN KEY(shortname) REFERENCES assignment_tbl(shortname) ON DELETE CASCADE
-ON UPDATE CASCADE, version INT NOT NULL, submit_date DATE NOT NULL, data TEXT, PRIMARY KEY(username, shortname, version));`
+- Creating Assignment Table  
+`CREATE TABLE assignment_tbl (shortname  VARCHAR(50) NOT NULL PRIMARY KEY , due_date DATE NOT NULL, url VARCHAR(255) );`
 #### TABLE STRUCTURE
 ![](image/task%202.2.png)
 
-- Creating Assignment Table  
-`CREATE TABLE assignment_tbl (shortname  VARCHAR(50) NOT NULL PRIMARY KEY , due_date DATE NOT NULL, url VARCHAR(255) UNIQUE);`
+- Creating Submission Table  
+` CREATE TABLE submission tbl(version INT(10) PRIMARY KEY, submit_date DATE NOT NULL, raw_data TEXT, username VARCHAR(55), shortname VARCHAR(55),
+CONSTRAINT FK_username FOREIGN KEY(username) REFERENCES student_tbl(username), CONSTRAINT FK_shortname FOREIGN KEY(shortname) REFERENCES assignment_tbl(shortname) );`
 #### TABLE STRUCTURE
 ![](image/task%202.3.png)
+
 
 ### HERE IS THE ER Diagram OR Relational schema
 ![](image/erd%202.png)
