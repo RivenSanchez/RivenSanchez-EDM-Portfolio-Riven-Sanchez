@@ -21,8 +21,8 @@ Create a table named *products* with the following fields:
 `product_name`: String (VARCHAR) with a maximum length of 100, cannot be null.
 `price`: Decimal
 #### CODE:
-`CREATE TABLE products (id INT(3) UNIQUE AUTO_INCREMENT PRIMARY KEY, product_name VARCHAR(100) NOT NULL, 
-price FLOAT(7,4) NOT NULL);`
+`CREATE TABLE products (id INT(11) AUTO_INCREMENT PRIMARY KEY, product_name VARCHAR(100) NOT NULL, 
+price FLOAT(7,2) NOT NULL);`
 #### HERE IS THE QUERY STATEMENT AND TABLE STRUCTURE
 ![](image/task%203.1.png)
 
