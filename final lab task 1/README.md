@@ -49,23 +49,23 @@ The following are the tasks that need to be implemented using MySQL statements. 
 ### task 1
 ![](image/task%201.1.png)  
 - code  
-  `CREATE TABLE employees_tbl (employee_id INT(3) UNIQUE AUTO_INCREMENT PRIMARY KEY,
+  `CREATE TABLE employees_tbl (employee_id INT(10) UNIQUE AUTO_INCREMENT PRIMARY KEY,
  employee_name VARCHAR(255) NOT NULL, 
- manager_id INT(3), FOREIGN KEY(manager_id) REFERENCES employees_tbl(employee_id));`
+ manager_id INT(10), FOREIGN KEY(manager_id) REFERENCES employees_tbl(employee_id));`
 ### task 2
 ![](image/task%201.2.png)
 - code  
-  `CREATE TABLE departments_tbl (department_id INT(3) UNIQUE AUTO_INCREMENT PRIMARY KEY,
+  `CREATE TABLE departments_tbl (department_id INT(10) UNIQUE AUTO_INCREMENT PRIMARY KEY,
  department_name VARCHAR(255) NOT NULL);`
 ### task 3
 ![](image/task%201.3.png)
 - code  
-`CREATE TABLE employee_departments_tbl (employee_id INT(3), FOREIGN KEY (employee_id) REFERENCES employees_tbl(employee_id), 
-department_id INT(3), FOREIGN KEY(department_id) REFERENCES departments_tbl(department_id));`
+`CREATE TABLE employee_departments_tbl (employee_id INT(10), FOREIGN KEY (employee_id) REFERENCES employees_tbl(employee_id), 
+department_id INT(10), FOREIGN KEY(department_id) REFERENCES departments_tbl(department_id));`
 ### task 4
 ![](image/task%201.4.png)
 - code  
-  `CREATE TABLE employee_projects_tbl (employee_id INT(3), FOREIGN KEY(employee_id) REFERENCES employees_tbl(employee_id),
+  `CREATE TABLE employee_projects_tbl (employee_id INT(10), FOREIGN KEY(employee_id) REFERENCES employees_tbl(employee_id),
  project_name VARCHAR(255) NOT NULL);`
 
 
