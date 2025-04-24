@@ -4,7 +4,7 @@
 Given the ER diagram representing student assignment submissions, convert it into MySQL
 tables. Capture all entities and their attributes, and define the relationships between students,
 submissions, and assignments. Identify the primary and foreign keys and ensure proper representation of any dependent or weak entities.  
-![ER model](model%20(1).png)
+
 ## REQUIRED OUTPUT
 1. Query statements (Task 1-4 including the table relationship)
 2. Table Structure (Task 1- 4 including the table relationship)
